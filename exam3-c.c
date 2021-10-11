@@ -24,7 +24,7 @@ int main()
             sum += mas[i];
          }
          float gpa = (float) sum / (float) n;
-         printf("GPA = %1.2f\n", gpa);
+         printf("GPA = %.2f\n", gpa);
          if (gpa > 4.6)
          
             printf("Your GPA allows us to take you to our university! Congratulations\n");
@@ -37,13 +37,13 @@ int main()
          {
             for (int i = 0; i < n; i++)
             {
-               mas[i] = rand() %5 + 2;
+               mas[i] = 2 + rand() %5 ;
                printf("mas[%d] = ", i);
                printf("%d\n", mas[i]);
                sum += mas[i];
             }
             float gpa = (float) sum / (float) n;
-            printf("GPA = %1.2f\n", gpa);
+            printf("GPA = %.2f\n", gpa);
             if (gpa > 4.6)
          
                printf("Your GPA allows us to take you to our university! Congratulations\n");
