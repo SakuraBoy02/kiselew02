@@ -20,7 +20,23 @@ printf("\n");
 for (int i = 0; i < months; i++)
 printf("% 6d", salary[i]);
 
+int year_sum = 0;
+for (int i = 0; i < months; i++)
+    year_sum += salary[i];
+
+float year_avg = year_sum / (float) months;
+
+//float dev = salary - year_avg;
+///for (int i = 0; i < months; i++)
+//printf("% 6f", dev);
+int dev = 0;
+for (int i = 0; i < months; i++)
+    dev = salary[i] - year_avg;
+
+
 printf("\n");
+
+
 
 printf(" "); 
 
@@ -34,12 +50,19 @@ for (int i = 0; i < months; i++)
 } 
 printf("\n");
 
-int year_sum = 0;
 for (int i = 0; i < months; i++)
-    year_sum += salary[i];
+printf("% 6d", dev);
+
+printf("\n");
+
+
+
+//int year_sum = 0;
+//for (int i = 0; i < months; i++)
+    //year_sum += salary[i];
 printf("year_sum = %d\n", year_sum);
 
-float year_avg = year_sum / (float) months;
+//float year_avg = year_sum / (float) months;
 printf("year_avg = %.2f\n", year_avg);
 
 printf("year_tax = %.2f\n", year_tax);
