@@ -6,6 +6,7 @@
 #define pmax 780
 #define pnorm 760
 int pressure[n];
+int per;
 /*
 float lerp(float a, float b, float t)
 {
@@ -23,20 +24,40 @@ int main()
     }
     printf("\n");
 
+    
+
     int below = 0;
     int exact = 0;
     int above = 0;
 
+    printf("enter the day to be deleted: ");
+    scanf("%d", &per);
+
     for (int i = 0; i < n; i++)
     {
-        if (pressure[i] < pnorm)
-            below ++;
+        if (i == per)
+        {
+            pressure[i] = 0;
+        }
+    }
 
-        if (pressure[i] == pnorm)
-            exact ++;
+    for (int i = 0; i < n; i++)
+    {
+        if (pressure[i] <= 0)
+        {
+            
+        }
+        else
+        {
+            if (pressure[i] < pnorm)
+                below ++;
 
-        if (pressure[i] > pnorm)
-            above ++;
+            if (pressure[i] == pnorm)
+                exact ++;
+
+            if (pressure[i] > pnorm)
+                above ++;
+        }
     }
 
     printf("below: %d\n", below);
