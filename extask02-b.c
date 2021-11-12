@@ -86,21 +86,7 @@ int main()
         }
     }
 
-    /*
-    printf("\n");
-
-    current = last;
-    while (current != NULL)
-    {
-        printf("%s", current->lastname);
-        for (int i = 0; i < num_marks; i++)
-        printf(" %d", current->marks[i]);
-        printf("\n");
-
-        current = current -> prev;
-
-    }
-    */
+    
     
     return 0;
 
