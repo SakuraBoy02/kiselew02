@@ -21,8 +21,8 @@ int main()
     float d = v0y * v0y + 4.0f * (g / 2.0f * y0);
     printf("d = %f\n", d);
 
-    float t1 = (-v0y - sqrtf(d)) / 2.0f * (-g / 2.0f);
-    float t2 = (-v0y + sqrtf(d)) / 2.0f * (-g / 2.0f);
+    float t1 = (-v0y - sqrtf(d)) / (2.0f * (-g / 2.0f));
+    float t2 = (-v0y + sqrtf(d)) / (2.0f * (-g / 2.0f));
     printf("t1 = %f, t2 = %f\n", t1, t2);
 
     float t = 0.0f;

@@ -13,6 +13,8 @@ int main()
     scanf("%lf %lf", &a, &b);
 
     double e;
+    int i = 0;
+
     printf("e: ");
     scanf("%lf", &e);
     while (1)
@@ -22,17 +24,15 @@ int main()
         double fa = f(a);
         double fc = f(c);
 
-        printf("%f %f %f\n", fa, fc, c);
-        int count;
         
+        i += 1;
+
+        printf("%f %f %f\n", fa, fc, c);
 
         if (fabs(fc) <= e)
         {
-            printf("x: %.5lf\n", c);
+            printf("x: %.5lf ", c);
             printf("y: %.5lf\n", fc);
-
-            //count++;
-            //printf("Steps: %d\n", count);
             break;
         }
         if (fa * fc > 0.0)
@@ -40,8 +40,8 @@ int main()
         else
             b = c;
 
-        count = count(fc);
-        printf("Steps: %d\n", count);
     }
+    printf("Steps: ");
+    printf("%d\n", i);
     return 0;
 }

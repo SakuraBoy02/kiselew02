@@ -34,7 +34,7 @@ int main()
         x = x0 + v0x * t;
         y = y0 + v0y * t - g * t * t / 2.0f;
 
-        printf("t = %f, x = %f, y = %f\n", t, x, y);
+        //printf("%f, %f, %f\n", t, x, y);
 
         if (y <= 0.0f) break;
 

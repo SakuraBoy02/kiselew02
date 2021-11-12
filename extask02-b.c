@@ -65,9 +65,28 @@ int main()
         printf("\n");
 
         current = current -> next;
-
     }
 
+    for (int i = 0; i < num_marks; i++)
+    {
+        if (i == marks_min)
+        {
+            current->marks[i] = 0;
+        }
+    }
+
+    for (int i = 0; i < num_marks; i++)
+    {
+        if (current->marks[i] != 0)
+        {
+            printf("%s", current->lastname);
+            for (int i = 0; i < num_marks; i++)
+            printf(" %d", current->marks[i]);
+            printf("\n");
+        }
+    }
+
+    /*
     printf("\n");
 
     current = last;
@@ -81,7 +100,7 @@ int main()
         current = current -> prev;
 
     }
-
+    */
     
     return 0;
 
