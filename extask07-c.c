@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//float calc_avg(int *a, int n)
+//{
+//}
+
 int main()
 {
+   #define mpass 4.6f
+
    int n, a;
    int *mas;
    int sum = 0;
@@ -24,8 +30,8 @@ int main()
             sum += mas[i];
          }
          float gpa = (float) sum / (float) n;
-         printf("GPA = %.2f\n", gpa);
-         if (gpa > 4.6)
+         printf("GPA = %.f\n", gpa);
+         if (gpa >= mpass)
          
             printf("Your GPA allows us to take you to our university! Congratulations\n");
          else

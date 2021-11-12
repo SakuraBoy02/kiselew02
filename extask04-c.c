@@ -18,7 +18,7 @@ int main()
     printf("e: ");
     scanf("%lf", &e);
 
-    FILE *abc = fopen("extask04-b.txt", "w+");
+    FILE *abc = fopen("extask04-c.txt", "w+");
     
     while (1)
     {
@@ -48,5 +48,6 @@ int main()
     }
     printf("Steps: %d\n", i);
     fprintf(abc, "Steps: %d\n", i);
+    fclose(abc);
     return 0;
 }
