@@ -29,9 +29,9 @@ int main()
     
     for (int i = 0; i < n; i++)
     {
-        //printf("%s\t%s\t%d\t%d\n",
-                //row[i].drug_name, row[i].indicat,
-                //row[i].exp_years, row[i].mfg_year);
+        printf("%s\t%s\t%d\t%d\n",
+                row[i].drug_name, row[i].indicat,
+                row[i].exp_years, row[i].mfg_year);
 
         fprintf(abc, "%s\t%s\t%d\t%d\n",
                 row[i].drug_name, row[i].indicat,
