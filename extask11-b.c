@@ -26,6 +26,17 @@ int main()
 		avg[y] = s / (float)cols;
 	}
 
+	int search = 0 ;
+	float bestresult = avg[0];
+	for(int q = 1; q < rows; q++ )
+	{
+		if (bestresult > avg[q])
+		{
+			bestresult = avg[q];
+			search = q+1;
+		}
+	}
+
 	printf("num");
 	for(int x = 0; x < cols; x++)
 	{
@@ -43,5 +54,7 @@ int main()
 		}
 		printf("\t%.1f\n", avg[y]);
 	}
+	printf("The number of the student with the high result: %d\n", search);
+
 return 0;
 }
